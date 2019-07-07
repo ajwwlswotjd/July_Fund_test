@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="./indexStyle.css">
+	<meta charset="UTF-8">
+	<title>타이틀</title>
+</head>
+<body>
+	<header>
+		<div class="header-wrapper">
+			<div id="logo">
+				KICKSTARTER
+			</div>
+				
+			<div id="profile">
+				<i class="far fa-user-circle"></i>
+				<p class="login"><a href="#">정재성</a></p>
+				<p class="email">wotjd@gondr.com</p>
+			</div>
+
+			<nav>
+				<ul>
+					<li>
+						<i class="fas fa-plus-circle"></i>
+						<a href="/form.html">펀드 등록</a>
+					</li>
+					<li>
+						<i class="far fa-chart-bar"></i>
+						<a href="/fund-list.html">펀드 보기</a>
+					</li>
+					<li>
+						<i class="fas fa-chart-line"></i>
+						<a href="/investor-list.html">투자자 목록</a>
+					</li>
+					<li>
+						<i class="fas fa-user-plus"></i>
+						<a href="/register.html">회원가입</a>
+					</li>
+				</ul>
+			</nav>
+			<li class="log">
+				<i class="fas fa-sign-in-alt"></i>
+				로그아웃
+			</li>
+		</div>
+	</header>
+
+	<script>
+		let all = document.querySelectorAll("nav > ul > li");
+		let iAll = document.querySelectorAll("nav > ul > li > i");
+		iAll.forEach(function(x){
+			x.addEventListener("click",(e)=>{
+				e.target.parentElement.querySelector("a").click();
+			})
+		});
+		all.forEach( function(x){
+			x.addEventListener("click",(e)=>{e.target.querySelector("a").click()});
+		});
+		document.querySelector("#logo").addEventListener("click",()=>{
+			window.location.href = "/";
+		});
+		document.querySelector(".email").addEventListener("click",()=>{
+			document.querySelector(".login").click();
+		});
+	</script>
+
+	<section id="main-wrapper">
+		<section id="visual">
+			<div id="visual-dark">
+				<h1 class="visual-title">최고의 서비스를 제공하고 고수익창출을 선도하는<br> 우리는<span>킥스타터펀드</span>입니다.</h1>	
+			</div>
+		</section>
+
+		<section id="fund">
+			<li>
+				<div class="fund-num">
+					A0001
+				</div>
+
+				<canvas>
+					
+				</canvas>
+
+				<div class="fund-name">
+					준원이형 제모비용
+				</div>
+
+				<div class="ssbg">
+					상세보기
+				</div>
+			</li>
+			<li>
+				<div class="fund-num">
+					B2321
+				</div>
+
+				<canvas>
+					
+				</canvas>
+
+				<div class="fund-name">
+					압둘알리 간식비
+				</div>
+
+				<div class="ssbg">
+					상세보기
+				</div>
+			</li>
+			<li>
+				<div class="fund-num">
+					E2324
+				</div>
+
+				<canvas>
+					
+				</canvas>
+
+				<div class="fund-name">
+					김요한 참수값
+				</div>
+
+				<div class="ssbg">
+					상세보기
+				</div>
+			</li>
+			<li>
+				<div class="fund-num">
+					W3425
+				</div>
+
+				<canvas>
+					
+				</canvas>
+
+				<div class="fund-name">
+					대한민국 테러자금
+				</div>
+
+				<div class="ssbg">
+					상세보기
+				</div>
+			</li>
+		</section>
+
+	</section>
+
+	<footer>
+		Copyright Gondr Allright reserved. Since 2017-03-01
+	</footer>
+	
+	<script>
+		class App {
+			constructor(){
+				this.canvasList = document.querySelectorAll("canvas");
+				this.drawCanvas(this.canvasList[0],1500,2000);
+				this.drawCanvas(this.canvasList[1],1250,250000);
+				this.drawCanvas(this.canvasList[2],230000,1000000);
+				this.drawCanvas(this.canvasList[3],125000,150000);
+			}
+
+			drawCanvas(canvas,current,total){
+				let w = canvas.width;
+				let h = canvas.height;
+				let ctx = canvas.getContext("2d");
+				let term = current/Math.floor(Math.random()*80+45);
+				let now = 0;
+				let frame = setInterval(()=>{
+					now+=term;
+					if(now >= current){
+						now = current;
+						clearInterval(frame);
+					}
+					this.draw(w,h,ctx,now,total);
+				},1000/60);
+			}
+
+			draw(w,h,ctx,now,total){
+				ctx.clearRect(0,0,w,h);
+				ctx.beginPath();
+				ctx.moveTo(w/2,h/2);
+				ctx.arc(w/2,h/2,w/2-80,-Math.PI/2,3/2*Math.PI);
+				ctx.closePath();
+				ctx.fillStyle = `#ddd`;
+				ctx.fill();
+
+				ctx.beginPath();
+				ctx.moveTo(w/2,h/2);
+				ctx.arc(w/2,h/2,w/2-80,-Math.PI/2,-Math.PI/2+(now/total)*(2*Math.PI));
+				ctx.closePath();
+				ctx.fillStyle = `#333030`;
+				ctx.fill();
+
+				ctx.beginPath();
+				ctx.moveTo(w/2,h/2);
+				ctx.arc(w/2,h/2,w/2-100,-Math.PI/2,3/2*Math.PI);
+				ctx.closePath();
+				ctx.fillStyle = `#eee`;
+				ctx.fill();
+
+
+				let percent = Math.floor(now/total*100);
+				ctx.fillStyle = "#333030";
+				ctx.font = "25px Arial";
+				ctx.textAlign = 'center';
+				ctx.textBaseline = 'middle';
+				ctx.fillText(percent+"%",w/2,h/2);
+			}
+		}
+
+		let app = new App();
+
+
+	</script>
+
+</body>
+</html>

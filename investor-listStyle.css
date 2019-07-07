@@ -1,0 +1,361 @@
+#main-wrapper {
+	display: flex;
+	position: relative;
+}
+
+#main-wrapper > div {
+	height: 100%;
+	position: relative;
+}
+
+#left {
+	width: 75%;	
+}
+
+#right {
+	width: 25%;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	background-color: #003a70;
+}
+
+.right-container {
+	width: 80%;
+	height: 30%;
+	position: relative;
+}
+
+.right-container > h1 {
+	color: #fff;
+	font-size: 35px;
+	text-align: center;
+}
+
+.right-container > p {
+	text-align: justify;
+	padding: 0 20px;
+	position: relative;
+	top: 50px;
+	color: #fff;
+}
+
+.radio-container {
+	margin: 0 auto;
+	width: 350px;
+	height: 50px;
+	border : 1px solid #fff;
+	color: #fff;
+	position: relative;
+	top: 100px;
+	display: flex;
+	border-radius: 6px;
+}
+
+.radio-container > li {
+	width: 33.333%;
+	height: 100%;
+}
+
+.radio-container > li > input {
+	display: none;
+}
+
+.radio-container > li > label {
+	font-size: 16px;
+	transition: all .2s;
+	font-weight: bolder;
+	padding: 8px 12px;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.radio-container > li:nth-child(2){
+	border-left: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+.radio-container > li > input:checked ~ label {
+	background-color: #fff;
+	color: #003a70;
+}
+
+#list {
+	width: 100%;
+	height: 80%;
+	position: relative;
+}
+
+#page {
+	width: 100%;
+	height: 20%;
+	position: relative;
+}
+
+.title {
+	position: absolute;
+	font-size: 25px;
+	color: #ccc;
+	left: 80px;
+	top: 50px;
+}
+
+
+#left > div {
+	position: relative;
+	width: 100%;
+}
+
+#list {
+	height: 85%;
+}
+
+#page {
+	height: 15%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#page > ul {
+	margin-bottom: 50px;
+	border : 1PX solid #ccc;
+	width: 50%;
+	height: 30%;
+	border-radius: 5px;
+	position: relative;
+	display: flex;
+}
+
+#page > ul > li {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-left: 1px solid #ccc;
+}
+
+#page > ul > li:first-child {
+	border-left: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+#page > ul > li:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#page > ul > li > a {
+	font-size: 17px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #000;
+	font-weight: bolder;
+	width: 100%;
+	height: 100%;
+}
+
+#page > ul > li:hover {
+	background-color: #003a70;
+}
+
+#page > ul > li:hover > a  {
+	color: #fff;
+}
+
+.list-container {
+	width: 90%;
+	height: 90%;
+}
+
+#list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.list-ul {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: grid;
+	grid-template-rows: repeat(3,1fr);
+	grid-template-columns: repeat(2,1fr);
+	grid-gap: 30px;
+}
+
+.list-ul > li {
+	border-radius: 8px;
+	position: relative;
+	box-shadow: 2px 2px 5px 2px #0001;
+}
+
+.list-ul > li > div:not(:first-child) {
+	width: 50%;
+	height: 100%;
+	position: relative;
+}
+
+.list-ul > li:not(:last-child) {
+	display: flex;
+}
+
+.list-ul > li:last-child {
+	background-color: #003a70;
+	color: #fff;
+}
+
+
+.card-left {
+	border-right: 1px solid #ddd;
+	text-align: center;
+}
+
+.card-left > i {
+	color: #ccc;
+	font-size: 100px;
+	margin-bottom: 30px;
+	position: relative;
+	top: 30px;
+}
+
+.card-left > p {
+	text-shadow: 1px 0px 1px #0001; 
+	margin-top: 8px;
+	position: relative;
+	font-weight: bolder;
+	color: #666;
+	overflow: auto;
+}
+
+.card-container {
+	position: absolute;
+	height: 100%;
+	border-radius: 8px;
+	background: #f4f5f9;
+	animation-fill-mode: forwards !important;
+}
+
+.jl {
+	animation : move1 2s;
+}
+
+.jh {
+	animation : move2 2s;
+}
+
+.js {
+	animation : move3 2s;	
+}
+
+.jsp {
+	animation : move4 2s;
+}
+
+.jjs {
+	animation : move5 2s;	
+}
+
+
+@keyframes move4 {
+	from {
+		width: 0%;
+	}
+
+	to {
+		width: 22%;
+	}
+}
+
+@keyframes move1 {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
+
+@keyframes move2 {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 55%;
+	}
+}
+
+
+@keyframes move3 {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 35%;
+	}
+}
+
+@keyframes move5 {
+	from {
+		width: 0%;
+	}
+
+	to {
+		width: 88%;
+	}
+}
+
+.card-right-container {
+	width: 90%;
+	height: 90%;
+	position: relative;
+	padding: 10px;
+}
+
+.final {
+	display: none;
+}
+
+.fund-name {
+	font-size: 17px;
+	font-weight: bolder;
+	color : #666;
+	position: relative;
+	text-align: center;
+	position: relative;
+	top: 30px;
+}
+
+.fund-num {
+	text-align: center;
+	position: relative;
+	top: 30px;
+	font-weight: bolder;
+	color: #666;
+	font-size: 14px;
+}
+
+.img-container {
+	width: 85%;
+	margin: 0 auto;
+	position: relative;
+	border : 1px solid #ccc;
+	height: 55%;
+	top: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 5px;
+}
+
+.img-container > i {
+	font-size: 80px;
+}

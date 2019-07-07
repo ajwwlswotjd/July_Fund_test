@@ -1,0 +1,278 @@
+#left {
+	width: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #003a70;
+}
+
+.container {
+	position: relative;
+}
+
+#right {
+	width: 70%;
+}
+
+#left > .container {
+	width: 80%;
+	height: 30%;
+}
+
+#left > .container > h1 {
+	color: #fff;
+	text-align: center;
+	font-size: 35px;
+}
+
+#left > .container > p {
+	font-size: 14px;
+	color: #fff;
+	margin-top: 30px;
+	padding: 0 20px;
+	text-align: center;
+}
+
+#tip {
+	width: 140px;
+	height: 40px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;align-items: center;
+	color: #fff;
+	font-size: 17px;
+	cursor: pointer;border-radius: 5px;
+	margin-top: 30px;
+	border: 1px solid #fff;
+}
+
+#right {
+	display: flex;
+	justify-content: center;align-items: center;
+}
+
+#right > .container {
+	width: 90%;
+	height: 85%;
+	margin-bottom: 40px;
+	position: relative;
+	background: coral;
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	overflow: hidden;
+	grid-gap: 20px;
+}
+
+
+.title {
+	width: 100%;
+	height: 15%;
+	position: relative;
+}
+
+.list {
+	width: 100%;
+	height: 63%;
+	display: grid;
+	grid-gap: 60px;
+	padding: 40px 150px;
+	grid-template-columns: repeat(4,1fr);
+}
+
+.list > li {
+	box-shadow: 2px 3px 6px 3px #0001;
+	border-radius: 5px;
+}
+
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 22%;
+}
+
+.title > h4 {
+	position: absolute;
+	top: 60px;
+	left: 100px;
+	font-size: 25px;
+	font-weight:lighter;
+	color: #bbb;
+}
+
+.list > div {
+	width: 100%;
+	position: relative;
+}
+
+.top {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bolder;
+	color: #333030;
+	font-size: 18px;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.list > li > canvas {
+	width: 100%;
+}
+
+.list > li > p {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #333030;
+	font-size: 20px;
+	font-weight: bolder;
+	border-bottom: 1px solid #ddd;
+}
+
+.data {
+	width: 100%;
+	height: 60px;
+	display: flex;
+}
+
+.data > div {
+	width: 50%;
+	height: 100%;
+	font-size: 15px;
+	color: #aaa;
+}
+
+
+.data > div > i {
+	/*font-size: 20px;*/
+	margin-right: 10px;
+}
+
+
+.left {
+	line-height: 60px;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.right {
+	line-height: 60px;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.end-right {
+	font-size: 14px !important;
+	width: 70% !important;
+}
+
+.button-container {
+	width: 100%;
+	position: relative;
+	height: 106px;
+}
+
+.cl1 {
+	width: 100%;
+	height: 50%;
+	position: relative;
+	display: flex;
+}
+
+.cl2 {
+	width: 100%;
+	height: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;align-items: center;
+}
+
+.cl1 > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100%;
+}
+
+.button-container button {
+	height: 40px;
+	background-color: transparent;
+	outline: none;
+	border : 1px solid #ccc;
+	border-radius: 6px;
+	font-weight: bolder;
+	cursor: pointer;
+	color: #888777;
+}
+
+.button-container button:hover {
+	background-color: #fafafa;
+}
+
+.cl1 > div > button {
+	width: 140px;
+}
+
+.cl2 > button {
+	width: 310px;
+	margin-bottom: 5px;
+}
+
+.pg-container {
+	height: 50px;
+	width: 30%;
+	border-radius: 6px;
+	box-shadow: 1px 3px 3px 2px #0001;
+}
+
+
+.pg-container > ul {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+}
+
+.pg-container > ul > li {
+	height: 100%;
+	font-weight: bolder;
+	width: 10%;
+	font-size: 17px;
+}
+
+.pg-container > ul > li:last-child > a{
+	border-right: none;
+}
+
+.pg-container > ul > li > a {
+	width: 100%;
+	height: 100%;
+	border-right: 1px solid #ddd;
+	display: flex;
+	justify-content: center;
+	color: #333030;
+	align-items: center;
+}
+
+.pg-container > ul > li > a:hover {
+	background-color: #fafafa;
+}
+
+a.active {
+	background-color: #fafafa;
+}
+
+.end-left {
+	width: 40% !important;
+}
+
+.end-right {
+	width: 60% !important;
+}

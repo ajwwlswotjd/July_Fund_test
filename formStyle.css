@@ -1,0 +1,289 @@
+#main-wrapper {
+	display: flex;
+}
+
+#main-wrapper > div {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#left {
+	width: 35%;
+	background-color: #003a70;
+}
+
+#right {
+	width: 65%;
+}
+
+#left > .container {
+	width: 80%;
+	height: 30%;
+}
+
+#left > .container > h1 {
+	text-align: center;
+	color: #fefefe;
+	font-size: 35px;
+}
+
+#left > .container > p {
+	font-size: 15px;
+	color: #fefefe;
+	margin-top: 40px;
+	text-align: center;
+	line-height: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#left-btn {
+	width: 140px;
+	cursor: pointer;	
+	height: 40px;
+	margin: 0 auto;
+	background: transparent;
+	margin-top: 50px;
+	border: 1px solid #fefefe;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fefefe;
+	font-size: 17px;
+	border-radius: 5px;
+}
+
+#right > .container {
+	width: 55%;
+	height: 70%;
+	position: relative;
+}
+
+#right > .container > h1 {
+	color: #003a70;
+	text-align: center;
+	font-size: 50px;
+}
+
+.right-group {
+	position: relative;
+	top: 40px;
+	width: 70%;
+	margin: 0 auto;
+	height: auto;
+}
+
+
+.fundNum-group {
+	width: 100%;
+	height: 50px;
+	position: relative;
+	margin: 0 auto;
+}
+
+.fundNum-group > label {
+	position: absolute;
+	top: 18px;
+	left: 10px;
+	font-size: 17px;
+	font-weight: bolder;
+}
+
+.fundNum-group > input {
+	font-size: 17px;
+	border-radius: 4px;
+	font-weight: bolder;
+	width: 100%;
+	line-height: 60px;
+	height: 60px;
+	outline: none;
+	padding-left: 120px;
+	border : 1px solid #000;
+	border-radius: 4px;
+}
+
+.fundNum-group > input:focus {
+	color: #003a70;
+	border-radius: 8px;
+	border : 2px solid #003a70;
+}
+
+.fundNum-group > input:focus ~ label {
+	color: #003a70;
+}
+
+.fundName-group {
+	position: relative;
+	margin-top: 30px;
+}
+
+.fundName-group > input {
+	border : 1px solid #000;
+	width: 100%;
+	font-size: 17px;
+	font-weight: bolder;
+	color: #000;
+	padding-left: 140px;
+	line-height: 50px;
+	height: 50px;
+	outline: none;
+	border-radius: 4px;
+	padding-right: 10px;
+}
+
+.fundName-group > label {
+	position: absolute;
+	font-size: 17px;
+	font-weight: bolder;
+	color: #000;
+	bottom: 14px;
+	left: 10px;
+}
+
+.fundName-group > input:focus {
+	border : 2px solid #003a70;
+	border-radius: 8px;
+	color: #003a70;
+}
+
+.fundName-group > input:focus ~ label {
+	color: #003a70;
+}
+
+.fundDate-input {
+	margin-top: 30px;
+	position: relative;
+}
+
+.fundDate-input > input {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	color: #000;
+	font-size: 17px;
+	font-weight: bolder;
+	outline: none;
+	border-radius: 4px;
+	padding-left: 115px;
+	border : 1px solid #000;
+}
+
+.fundDate-input > label {
+	font-size: 17px;
+	font-weight: bolder;
+	color: #000;
+	position: absolute;
+	bottom: 14px;
+	left: 10px;
+}
+
+.fundDate-input > input:focus {
+	border : 2px solid #003a70;
+	border-radius: 8px;
+	color: #003a70;
+}
+
+.fundDate-input > input:focus ~ label{
+	color: #003a70;
+}
+
+.fundTotal-group {
+	position: relative;
+	top: 30px;
+	height: 50px;
+}
+
+#fund-total {
+	width: 100%;
+	height: 100%;
+	font-size: 17px;
+	font-weight: bolder;
+	color: #000;
+	border : 1px solid #000;
+	border-radius: 4px;
+	padding-left: 115px;
+	outline: none;
+}
+
+.fundTotal-group > label {
+	position: absolute;
+	bottom: 16px;
+	font-size: 17px;
+	font-weight: bolder;
+	left: 10px;
+}
+
+#fund-total:focus {
+	border: 2px solid #003a70;
+	color:  #003a70;
+}
+
+#fund-total:focus ~ label {
+	color: #003a70;
+}
+
+.fundDetail-group {
+	position: relative;
+	top: 60px;
+	height: 200px;
+}
+
+textarea {
+	width: 100%;
+	height: 100%;
+	padding: 12px 24px;
+	font-size: 17px;
+	color: #000;
+	border-radius: 4px;
+	font-weight: bolder;
+	border: 1px solid #000;
+	outline: none;
+}
+
+textarea:focus {
+	border: 2px solid #003a70;
+	color: #003a70;
+	border-radius: 8px;
+}
+
+.fundFile-group {
+	position: relative;
+	top: 80px;
+	height: 30PX;
+	width: 100%;
+}
+
+#fund-file {
+	display: none;
+}
+
+.label-container {
+	width: 100%;
+	height: 50px;
+	border-radius: 4px;
+	border : 1px solid #003a70;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: all .4s;
+	color: #003a70;
+}
+
+.label-container > label {
+	font-size: 17px;
+	cursor: pointer;
+	transition: all .4s;
+	font-weight: bolder;
+}
+
+.label-container:hover {
+	background-color: #003a70;
+}
+
+.label-container:hover > label {
+	color: #fff;
+}

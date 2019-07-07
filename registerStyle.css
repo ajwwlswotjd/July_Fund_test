@@ -1,0 +1,159 @@
+.wrapper {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.wrapper > div {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;align-items: center;
+}
+
+
+#right {
+	background-color: #003a70;
+}
+
+.container {
+	width: 75%;
+	padding-top: 150px;
+	height: 80%;
+	position: relative;
+}
+
+#left > .container > h1 {
+	text-align: center;
+	font-size: 40px;
+	color: #333030;
+	margin-top: 20px;
+}
+
+.underbar {
+	width: 60px;
+	margin: 0 auto;
+	height: 3px;
+	margin-top: 4px;
+	background-color: #003a70;
+	margin-bottom: 35px;
+}
+
+.input-group {
+	width: 100%;
+	height: 60px;
+	position: relative;
+	margin-bottom: 20px;
+	line-height: 60px;
+	text-align: center;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #aaa;
+}
+
+.input-group > label {
+	position: absolute;
+	margin-left: 10px;
+	transition: all .3s;
+	bottom: 0;
+}
+
+.input-group > input {
+	width: 80%;
+	color: #333030;
+	font-size: 15px;
+	padding-bottom: 10px;
+	height: 30px;
+	padding-left: 10px;
+	border : none;
+	border-bottom: 1px solid #999;
+	background: none;
+	outline: none;
+	transition: all .3s;
+}
+/*
+::placeholder {
+	color: rgba(0, 0, 0, 0);
+}
+
+input:not(:placeholder-shown) {
+	background: black;
+}*/
+
+.input-group > input:focus {
+	border-bottom: 1px solid #003a70;	
+}
+
+#register-ok {
+	width: 80%;
+	height: 50px;
+	border : none;
+	position: absolute;
+	transform: translateX(-50%);
+	background-color: #003a70;
+	border-radius: 5px;
+	font-weight: bolder;
+	font-size: 17px;
+	cursor: pointer;
+	color: #fff;
+	left: 50%;
+	outline: none;
+}
+
+#register-ok:hover {
+	filter: brightness(120%);
+}
+
+#right > .container > h1 {
+	font-size: 25px;
+	position: relative;
+	top: 120px;
+	color: #fefefe;
+	display: inline-block;
+}
+
+.underline {
+	position: relative;
+	top: 125px;
+	width: 100%;
+	height: 2px;
+}
+
+.udl {
+	width: 25%;
+	background: #fefefe;
+	height: 100%;
+}
+
+.right-lorem {
+	position: relative;
+	top: 200px;
+	font-size: 16px;
+	display: inline-block;
+	padding-right: 150px;
+	color: #fefefe;
+}
+
+#go-login {
+	width: 140px;
+	height:40px;
+	position: relative;
+	top: 235px;
+	background: transparent;
+	outline: none;
+	font-size: 15px;
+	border : 1px solid #fefefe;
+	z-index: 10;
+	color: #fefefe;
+	cursor: pointer;
+	border-radius: 5px;
+	font-weight: 350;
+}
+
+.input-group  i {
+	margin-right: 4px;
+}
