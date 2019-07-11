@@ -122,7 +122,7 @@ nav > li:hover > a {
 }
 
 nav > li > a {
-	color: #333030;
+	color: #666;
 	transition: all .4s;
 }
 
@@ -152,30 +152,31 @@ nav > li > a > i {
 
 .user-option > div > i {
 	margin-right: 2px;
-	color: #333030;
+	color: #666;
 	transition: all .5s;
 }
 
 .user-option > div:hover {
 	background-color: #f4f5f9;
-	border-left: 5px solid #22b8cf;
-	color: #22b8cf !important;
+	border-left: 5px solid #20c997;
+	color: #20c997 !important;
 }
 
 .user-option > div > a {
 	transition: all .5s;
+	color: #666;
 }
 
 .user-option > div:hover > i {
-	color: #22b8cf !important;
+	color: #20c997 !important;
 }
 
 .user-option > div:hover > a {
-	color: #22b8cf;
+	color: #20c997;
 }
 
 #main-wrapper {
-	width: 100%;
+	width: calc(100%-200px);
 	margin-left: 200px;
 	height: 100vh;
 	position: relative;
@@ -183,18 +184,18 @@ nav > li > a > i {
 
 .on {
 	background-color: #f4f5f9;
-	border-left: 5px solid #22b8cf !important;
-	color: #22b8cf !important;
+	border-left: 5px solid #20c997 !important;
+	color: #20c997 !important;
 }
 
 .on > a {
-	color: #22b8cf !important;
+	color: #20c997 !important;
 }
 
 .on > i {
-	color: #22b8cf !important;
+	color: #20c997 !important;
 }
 
 body {
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }

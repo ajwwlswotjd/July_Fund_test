@@ -1,0 +1,128 @@
+#main-wrapper {
+	display: flex;
+}
+
+#main-wrapper > div {
+	height: 100%;
+	position: relative;
+}
+
+#left {
+	width: 70%;
+}
+
+#right {
+	width: 30%;
+	background: #003a70;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#left-container {
+	
+}
+
+#right-container {
+	position: relative;
+	width: auto;
+	height: auto;
+	color: #fff;	
+}
+
+#right-container > h1 {
+	font-size: 25px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.lorem {
+	padding: 0 70px;
+	margin-top: 20px;
+	text-align: left;
+}
+
+.select-box {
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 40px;
+	height: 50px;
+	border : 1px solid #ccc;
+	border-radius: 10px;
+	display: flex;
+}
+
+.select-box > div{
+	width: 33.333%;
+	height: 100%;
+}
+
+.select-box > div > label {
+	width: 100%;
+	border-right: 1px solid #ccc;	
+	height: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #fff;
+	transition: all .4s;
+}
+
+.select-box > div > input:checked ~ label {
+	background-color: #fff;
+	color: #003a70;
+}
+
+.select-box > div > input {
+	display: none;
+}
+
+.select-box > div:last-child > label {
+	border-right: none;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.select-box > div:first-child > label {
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+#list {
+	width: 100%;
+	height: 80%;
+	background: #ddd;
+}
+
+#page {
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.page-container {
+	width: 60%;
+	height: 30%;
+	border-radius: 10px;
+	border : 1px solid #ccc;
+	margin-bottom: 45px;
+	display: flex;
+}
+
+.page-container > li {
+	width: 10%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid #ccc;
+}
+
+.page-container > li:last-child {
+	border-right: none;
+}
