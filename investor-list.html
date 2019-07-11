@@ -1,224 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="./investor-listStyle.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.4.1.js"></script>
 	<meta charset="UTF-8">
-	<title>타이틀</title>
+	<title>A모듈</title>
 </head>
 <body>
 	<header>
-		<div class="header-wrapper">
-			<div id="logo">
-				KICKSTARTER
+		<div id="logo"></div>
+		<div id="profile">
+			<i class="far fa-user-circle"></i>
+			<p class="user-job">사용자</p>
+			<p class="user-email">ajwwlswotjd@naver.com</p>
+		</div>
+		<nav>
+			<li><a href="/index.html">
+				<i class="fas fa-plus-circle"></i>
+				메인페이지
+			</a></li>
+			<li><a href="/fund-list.html">
+				<i class="fas fa-chart-bar"></i>
+				펀드보기
+			</a></li>
+			<li class="active"><a href="/investor-list.html">
+				<i class="fas fa-chart-line"></i>
+				투자자목록
+			</a></li>
+			<li><a href="/form.html">
+				<i class="fas fa-plus-circle"></i>
+				펀드등록
+			</a></li>
+		</nav>
+
+		<div class="user-option">
+			<div class="register-mypage">
+				<i class="fas fa-user-plus"></i>
+				<a href="/register.html">회원가입</a>
 			</div>
 
-			<div id="profile">
-				<i class="far fa-user-circle"></i>
-				<p class="login"><a href="#">정재성</a></p>
-				<p class="email">wotjd@gondr.com</p>
+			<div class="login-logout">
+				<i class="fas fa-sign-out-alt"></i>
+				<a href="#">로그인</a>
 			</div>
-
-			<nav>
-				<ul>
-					<li>
-						<i class="fas fa-plus-circle"></i>
-						<a href="/form.html">펀드 등록</a>
-					</li>
-					<li>
-						<i class="far fa-chart-bar"></i>
-						<a href="/fund-list.html">펀드 보기</a>
-					</li>
-					<li class="active">
-						<i class="fas fa-chart-line"></i>
-						<a href="/investor-list.html">투자자 목록</a>
-					</li>
-					<li>
-						<i class="fas fa-user-plus"></i>
-						<a href="/register.html">회원가입</a>
-					</li>
-				</ul>
-			</nav>
-			<li class="log">
-				<i class="fas fa-sign-in-alt"></i>
-				로그아웃
-			</li>
 		</div>
 	</header>
 
-	<script>
-		let all = document.querySelectorAll("nav > ul > li");
-		let iAll = document.querySelectorAll("nav > ul > li > i");
-		iAll.forEach(function(x){
-			x.addEventListener("click",(e)=>{
-				e.target.parentElement.querySelector("a").click();
-			})
-		});
-		all.forEach( function(x){
-			x.addEventListener("click",(e)=>{e.target.querySelector("a").click()});
-		});
-		document.querySelector("#logo").addEventListener("click",()=>{
-			window.location.href = "/";
-		});
-		document.querySelector(".email").addEventListener("click",()=>{
-			document.querySelector(".login").click();
-		});
-	</script>
-
-	<section id="main-wrapper">	
-		<div id="left">
-			<div id="list">
-				<div class="list-container">
-					<ul class="list-ul">
-						<li>
-							<div class="card-container jl"></div>
-							<div class="card-left">
-								<i class="fas fa-user"></i>
-								<p class="investor">진 리<br>truth@real.com</p>
-								<p class="pay">
-									<i class="far fa-credit-card"></i>
-									투자금액 : 500,000원
-								</p>
-							</div>
-
-							<div class="card-right">
-								<div class="fund-num">A0001</div>
-								<div class="fund-name">준원이형 제모비용</div>
-								<div class="img-container">
-									<i class="fas fa-images"></i>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card-container jh"></div>
-							<div class="card-left">
-								<i class="fas fa-user"></i>
-								<p class="investor">전재환<br>chamsuKing@is.com</p>
-								<p class="pay">
-									<i class="far fa-credit-card"></i>
-									투자금액 : 100,000,000원
-								</p>
-							</div>
-
-							<div class="card-right">
-								<div class="fund-num">D1232</div>
-								<div class="fund-name">압둘알리 간식비</div>
-								<div class="img-container">
-									<i class="fas fa-images"></i>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card-container js"></div>
-							<div class="card-left">
-								<i class="fas fa-user"></i>
-								<p class="investor">박지호<br>giveMeUSB@usb.com</p>
-								<p class="pay">
-									<i class="far fa-credit-card"></i>
-									투자금액 : 500,000,000,000원
-								</p>
-							</div>
-
-							<div class="card-right">
-								<div class="fund-num">E3121</div>
-								<div class="fund-name">김요한의 축구세트</div>
-								<div class="img-container">
-									<i class="fas fa-images"></i>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card-container jsp"></div>
-							<div class="card-left">
-								<i class="fas fa-user"></i>
-								<p class="investor">박지성<br>fuckingKorea@loveJapan.jp</p>
-								<p class="pay">
-									<i class="far fa-credit-card"></i>
-									투자금액 : 15,000원
-								</p>
-							</div>
-
-							<div class="card-right">
-								<div class="fund-num">H2322</div>
-								<div class="fund-name">탈조선 프로젝트</div>
-								<div class="img-container">
-									<i class="fas fa-images"></i>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="card-container jjs"></div>
-							<div class="card-left">
-								<i class="fas fa-user"></i>
-								<p class="investor">정재성<br>awwlswotjd@naver.com</p>
-								<p class="pay">
-									<i class="far fa-credit-card"></i>
-									투자금액 : 165,500,000원
-								</p>
-							</div>
-
-							<div class="card-right">
-								<div class="fund-num">M1414</div>
-								<div class="fund-name">메이플스토리 랭킹1등</div>
-								<div class="img-container">
-									<i class="fas fa-images"></i>
-								</div>
-							</div>
-						</li>
-						<li class="final">
-							<h1>더보기</h1>
-							<div class="sl-container">
-								<i class="fas fa-angle-double-right side"></i>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-
-
-			<div id="page">
-				<ul>
-					<li><a href="#">이전</a></li>
-					<li><a href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li><a href="#">7</a></li>
-					<li><a href="#">8</a></li>
-					<li><a href="#">다음</a></li>
-				</ul>
-			</div>
-
-		</div>
-
-		<div id="right">
-			<div class="right-container">
-				<h1>투자자 목록</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione nisi, accusantium atque perferendis veritatis cum quibusdam culpa mollitia accusamus
-				</p>
-				<div class="radio-container">
-					<li>
-						<input type="radio" name="radio" id="radio1" checked>
-						<label for="radio1">펀드별</label>
-					</li>
-					<li>
-						<input type="radio" name="radio" id="radio2">
-						<label for="radio2">개인별</label>
-					</li>
-					<li>
-						<input type="radio" name="radio" id="radio3">
-						<label for="radio3">최근등록순</label>
-					</li>
-				</div>
-			</div>
-		</div>
+	<section id="main-wrapper">
+		
 	</section>
 
 	<footer>
 		Copyright Gondr Allright reserved. Since 2017-03-01
 	</footer>
+
+	<script>
+		$("nav > li").on("click",(e)=>{
+			e.target.querySelector("a").click();
+		});
+		$("#logo").on("click",()=>{$("nav > li:nth-child(1)").click()});
+		$(".register-mypage").on("click",(e)=>{e.target.querySelector("a").click()});
+	</script>
 </body>
 </html>

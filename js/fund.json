@@ -5,6 +5,7 @@
 		"endDate":"2019-07-05 17:00:30",
 		"total":1000000,
 		"current":5000,
+		"owner":"gondr99@gmail.com",
 		"investorList":[
 			{
 				"email": "gondr99@nate.com",
@@ -19,6 +20,7 @@
 		"endDate":"2019-07-15 17:00:30",
 		"total":50000,
 		"current":20000,
+		"owner":"gondr99@nate.com",
 		"investorList":[
 			{
 				"email": "abc@13.com",
@@ -38,6 +40,7 @@
 		"endDate":"2019-05-01 15:30:00",
 		"total":40000,
 		"current":35000,
+		"owner":"abc@13.com",
 		"investorList":[
 			{
 				"email": "funding@gmail.com",
@@ -72,6 +75,7 @@
 		"endDate":"2019-12-31 08:30:00",
 		"total":2000000,
 		"current":0,
+		"owner":"gggg@naver.com",
 		"investorList":[]
 	},
 	{
@@ -80,6 +84,7 @@
 		"endDate":"2019-08-11 09:00:00",
 		"total":1000000,
 		"current":500,
+		"owner":"gondr99@gmail.com",
 		"investorList":[
 			{
 				"email":"hj@naver.com",

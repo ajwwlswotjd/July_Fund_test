@@ -1,150 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="./formStyle.css">
-	<script src="/js/jquery-3.4.1.js"></script>
-	<script src="./FormApp.js"></script>
-	<script src="./Fund.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.4.1.js"></script>
 	<meta charset="UTF-8">
-	<title>타이틀</title>
+	<title>A모듈</title>
 </head>
 <body>
-	<div class="toast-wrapper">
-		
-	</div>
 	<header>
-		<div class="header-wrapper">
-			<div id="logo">
-				KICKSTARTER
-			</div>
-				
-			<div id="profile">
-				<i class="far fa-user-circle"></i>
-				<p class="login"><a href="#">정재성</a></p>
-				<p class="email">wotjd@gondr.com</p>
+		<div id="logo"></div>
+		<div id="profile">
+			<i class="far fa-user-circle"></i>
+			<p class="user-job">사용자</p>
+			<p class="user-email">ajwwlswotjd@naver.com</p>
+		</div>
+		<nav>
+			<li><a href="/index.html">
+				<i class="fas fa-plus-circle"></i>
+				메인페이지
+			</a></li>
+			<li><a href="/fund-list.html">
+				<i class="fas fa-chart-bar"></i>
+				펀드보기
+			</a></li>
+			<li><a href="/investor-list.html">
+				<i class="fas fa-chart-line"></i>
+				투자자목록
+			</a></li>
+			<li class="active"><a href="/form.html">
+				<i class="fas fa-plus-circle"></i>
+				펀드등록
+			</a></li>
+		</nav>
+
+		<div class="user-option">
+			<div class="register-mypage">
+				<i class="fas fa-user-plus"></i>
+				<a href="/register.html">회원가입</a>
 			</div>
 
-			<nav>
-				<ul>
-					<li class="active">
-						<i class="fas fa-plus-circle"></i>
-						<a href="/form.html">펀드 등록</a>
-					</li>
-					<li>
-						<i class="far fa-chart-bar"></i>
-						<a href="/fund-list.html">펀드 보기</a>
-					</li>
-					<li>
-						<i class="fas fa-chart-line"></i>
-						<a href="/investor-list.html">투자자 목록</a>
-					</li>
-					<li>
-						<i class="fas fa-user-plus"></i>
-						<a href="/register.html">회원가입</a>
-					</li>
-				</ul>
-			</nav>
-			<li class="log">
-				<i class="fas fa-sign-in-alt"></i>
-				로그아웃
-			</li>
+			<div class="login-logout">
+				<i class="fas fa-sign-out-alt"></i>
+				<a href="#">로그인</a>
+			</div>
 		</div>
 	</header>
 
-	<script>
-		let all = document.querySelectorAll("nav > ul > li");
-		let iAll = document.querySelectorAll("nav > ul > li > i");
-		iAll.forEach(function(x){
-			x.addEventListener("click",(e)=>{
-				e.target.parentElement.querySelector("a").click();
-			})
-		});
-		all.forEach( function(x){
-			x.addEventListener("click",(e)=>{e.target.querySelector("a").click()});
-		});
-		document.querySelector("#logo").addEventListener("click",()=>{
-			window.location.href = "/";
-		});
-		document.querySelector(".email").addEventListener("click",()=>{
-			document.querySelector(".login").click();
-		});
-	</script>
-
 	<section id="main-wrapper">
-		<div id="left">
-			<div class="container">
-				<h1>이용해주셔서 감사합니다!</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam ipsam similique quae expedita illo dignissimos.
-				</p>
-				<div id="left-btn">등록 도움말</div>
-			</div>
-		</div>
-
-		<div id="right">
-			<div class="container">
-				<h1>Create Fund</h1>
-				<div class="right-group">
-					<div class="fundNum-group">
-						<input type="text" id="fund-num" readonly value="A0001">
-						<label for="fund-num">
-							<i class="fab fa-ravelry"></i>
-							펀드 번호 : 
-						</label>
-					</div>
-
-					<div class="fundName-group">
-						<input type="text" id="fund-name">
-						<label for="fund-name">
-							<i class="fas fa-tags"></i>
-							창업 펀드명 : 
-						</label>
-					</div>
-
-					<div class="fundDate-input">
-						<input type="datetime-local" id="fund-date" step="1">
-						<label for="fund-date">
-							<i class="far fa-calendar-alt"></i>
-							모집 날짜 : 
-						</label>
-					</div>
-
-					<div class="fundTotal-group">
-						<input type="number" id="fund-total">
-						<label for="fund-total">
-							<i class="fas fa-coins"></i>
-							모집 금액 : 
-						</label>
-					</div>
-
-					<div class="fundDetail-group">
-						<textarea maxlength="500" placeholder="상세 설명" name="fund-detail" id="fund-detail" cols="30" rows="10"></textarea>
-					</div>
-
-					<div class="fundFile-group">
-						<div class="label-container">
-							<label for="fund-file">이미지 업로드</label>
-						</div>
-						<input type="file" id="fund-file">
-					</div>
-				</div>
-
-			<button id="tlqkf" style="padding: 4px 8px;">가즈아ㅏ!</button>
-			</div>
-		</div>
+		
 	</section>
-
 
 	<footer>
 		Copyright Gondr Allright reserved. Since 2017-03-01
 	</footer>
 
 	<script>
-		document.querySelector(".label-container").addEventListener("click",(e)=>{
-			e.target.querySelector("label").click();
+		$("nav > li").on("click",(e)=>{
+			e.target.querySelector("a").click();
 		});
+		$("#logo").on("click",()=>{$("nav > li:nth-child(1)").click()});
+		$(".register-mypage").on("click",(e)=>{e.target.querySelector("a").click()});
 	</script>
-
 </body>
 </html>

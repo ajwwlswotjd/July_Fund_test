@@ -1,78 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="./indexStyle.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" href="./css/indexStyle.css">
 	<meta charset="UTF-8">
-	<title>타이틀</title>
+	<title>A모듈</title>
 </head>
 <body>
 	<header>
-		<div class="header-wrapper">
-			<div id="logo">
-				KICKSTARTER
-			</div>
-				
-			<div id="profile">
-				<i class="far fa-user-circle"></i>
-				<p class="login"><a href="#">정재성</a></p>
-				<p class="email">wotjd@gondr.com</p>
+		<div id="logo"></div>
+		<div id="profile">
+			<i class="far fa-user-circle"></i>
+			<p class="user-job">사용자</p>
+			<p class="user-email">ajwwlswotjd@naver.com</p>
+		</div>
+		<nav>
+			<li class="active"><a href="/index.html">
+				<i class="fas fa-plus-circle"></i>
+				메인페이지
+			</a></li>
+			<li><a href="/fund-list.html">
+				<i class="fas fa-chart-bar"></i>
+				펀드보기
+			</a></li>
+			<li><a href="/investor-list.html">
+				<i class="fas fa-chart-line"></i>
+				투자자목록
+			</a></li>
+			<li><a href="/form.html">
+				<i class="fas fa-plus-circle"></i>
+				펀드등록
+			</a></li>
+		</nav>
+
+		<div class="user-option">
+			<div class="register-mypage">
+				<i class="fas fa-user-plus"></i>
+				<a href="/register.html">회원가입</a>
 			</div>
 
-			<nav>
-				<ul>
-					<li>
-						<i class="fas fa-plus-circle"></i>
-						<a href="/form.html">펀드 등록</a>
-					</li>
-					<li>
-						<i class="far fa-chart-bar"></i>
-						<a href="/fund-list.html">펀드 보기</a>
-					</li>
-					<li>
-						<i class="fas fa-chart-line"></i>
-						<a href="/investor-list.html">투자자 목록</a>
-					</li>
-					<li>
-						<i class="fas fa-user-plus"></i>
-						<a href="/register.html">회원가입</a>
-					</li>
-				</ul>
-			</nav>
-			<li class="log">
-				<i class="fas fa-sign-in-alt"></i>
-				로그아웃
-			</li>
+			<div class="login-logout">
+				<i class="fas fa-sign-out-alt"></i>
+				<a href="#">로그인</a>
+			</div>
 		</div>
 	</header>
 
-	<script>
-		let all = document.querySelectorAll("nav > ul > li");
-		let iAll = document.querySelectorAll("nav > ul > li > i");
-		iAll.forEach(function(x){
-			x.addEventListener("click",(e)=>{
-				e.target.parentElement.querySelector("a").click();
-			})
-		});
-		all.forEach( function(x){
-			x.addEventListener("click",(e)=>{e.target.querySelector("a").click()});
-		});
-		document.querySelector("#logo").addEventListener("click",()=>{
-			window.location.href = "/";
-		});
-		document.querySelector(".email").addEventListener("click",()=>{
-			document.querySelector(".login").click();
-		});
-	</script>
-
 	<section id="main-wrapper">
-		<section id="visual">
-			<div id="visual-dark">
-				<h1 class="visual-title">최고의 서비스를 제공하고 고수익창출을 선도하는<br> 우리는<span>킥스타터펀드</span>입니다.</h1>	
+		<div id="visual">
+			<div class="visual-dark">
+				<h1>최고의 서비스를 제공하고 고수익창출을 선도하는<br>우리는<span>킥스타터펀드</span>입니다.</h1>
 			</div>
-		</section>
+		</div>
 
-		<section id="fund">
+		<div id="fund">
 			<li>
 				<div class="fund-num">
 					A0001
@@ -86,13 +68,29 @@
 					준원이형 제모비용
 				</div>
 
+				<div class="fund-current">
+					<div>
+						<i class="fas fa-money-bill"></i>
+						현재금액
+					</div>
+					<div>15,000,000원</div>
+				</div>
+
+				<div class="fund-date">
+					<div>
+						<i class="far fa-calendar"></i>
+						모집마감일
+					</div>
+					<div>2019-07-15 12:00:00</div>
+				</div>
+
 				<div class="ssbg">
-					상세보기
+					<button>상세보기</button>
 				</div>
 			</li>
 			<li>
 				<div class="fund-num">
-					B2321
+					A0002
 				</div>
 
 				<canvas>
@@ -100,16 +98,32 @@
 				</canvas>
 
 				<div class="fund-name">
-					압둘알리 간식비
+					문팡이형 탈복숭이 프로젝트
+				</div>
+
+				<div class="fund-current">
+					<div>
+						<i class="fas fa-money-bill"></i>
+						현재금액
+					</div>
+					<div>20,000원</div>
+				</div>
+
+				<div class="fund-date">
+					<div>
+						<i class="far fa-calendar"></i>
+						모집마감일
+					</div>
+					<div>2020-12-31 15:12:12</div>
 				</div>
 
 				<div class="ssbg">
-					상세보기
+					<button>상세보기</button>
 				</div>
 			</li>
 			<li>
 				<div class="fund-num">
-					E2324
+					A0003
 				</div>
 
 				<canvas>
@@ -117,16 +131,32 @@
 				</canvas>
 
 				<div class="fund-name">
-					김요한 참수값
+					문쨩 사람만들기 프로젝트
+				</div>
+
+				<div class="fund-current">
+					<div>
+						<i class="fas fa-money-bill"></i>
+						현재금액
+					</div>
+					<div>15,000,000,000원</div>
+				</div>
+
+				<div class="fund-date">
+					<div>
+						<i class="far fa-calendar"></i>
+						모집마감일
+					</div>
+					<div>2019-10-19 15:15:15</div>
 				</div>
 
 				<div class="ssbg">
-					상세보기
+					<button>상세보기</button>
 				</div>
 			</li>
 			<li>
 				<div class="fund-num">
-					W3425
+					A0004
 				</div>
 
 				<canvas>
@@ -134,84 +164,101 @@
 				</canvas>
 
 				<div class="fund-name">
-					대한민국 테러자금
+					위대한트린님 올스킨 사드리기
+				</div>
+
+				<div class="fund-current">
+					<div>
+						<i class="fas fa-money-bill"></i>
+						현재금액
+					</div>
+					<div>500,000,000,000원</div>
+				</div>
+
+				<div class="fund-date">
+					<div>
+						<i class="far fa-calendar"></i>
+						모집마감일
+					</div>
+					<div>2019-7-31 23:59:59</div>
 				</div>
 
 				<div class="ssbg">
-					상세보기
+					<button>상세보기</button>
 				</div>
 			</li>
-		</section>
-
+		</div>
 	</section>
 
 	<footer>
 		Copyright Gondr Allright reserved. Since 2017-03-01
 	</footer>
-	
+
 	<script>
-		class App {
-			constructor(){
-				this.canvasList = document.querySelectorAll("canvas");
-				this.drawCanvas(this.canvasList[0],1500,2000);
-				this.drawCanvas(this.canvasList[1],1250,250000);
-				this.drawCanvas(this.canvasList[2],230000,1000000);
-				this.drawCanvas(this.canvasList[3],125000,150000);
-			}
+		$("nav > li").on("click",(e)=>{
+			e.target.querySelector("a").click();
+		});
+		$("#logo").on("click",()=>{$("nav > li:nth-child(1)").click()});
+		$(".register-mypage").on("click",(e)=>{e.target.querySelector("a").click()});
 
-			drawCanvas(canvas,current,total){
-				let w = canvas.width;
-				let h = canvas.height;
-				let ctx = canvas.getContext("2d");
-				let term = current/Math.floor(Math.random()*80+45);
-				let now = 0;
-				let frame = setInterval(()=>{
-					now+=term;
-					if(now >= current){
-						now = current;
-						clearInterval(frame);
-					}
-					this.draw(w,h,ctx,now,total);
-				},1000/60);
-			}
+		drawCanvas(0,50000000,15000000);
+		drawCanvas(1,50000,20000);
+		drawCanvas(2,155555000000,15000000000);
+		drawCanvas(3,9999999999999,500000000000);
 
-			draw(w,h,ctx,now,total){
-				ctx.clearRect(0,0,w,h);
-				ctx.beginPath();
-				ctx.moveTo(w/2,h/2);
-				ctx.arc(w/2,h/2,w/2-80,-Math.PI/2,3/2*Math.PI);
-				ctx.closePath();
-				ctx.fillStyle = `#ddd`;
-				ctx.fill();
-
-				ctx.beginPath();
-				ctx.moveTo(w/2,h/2);
-				ctx.arc(w/2,h/2,w/2-80,-Math.PI/2,-Math.PI/2+(now/total)*(2*Math.PI));
-				ctx.closePath();
-				ctx.fillStyle = `#333030`;
-				ctx.fill();
-
-				ctx.beginPath();
-				ctx.moveTo(w/2,h/2);
-				ctx.arc(w/2,h/2,w/2-100,-Math.PI/2,3/2*Math.PI);
-				ctx.closePath();
-				ctx.fillStyle = `#eee`;
-				ctx.fill();
-
-
-				let percent = Math.floor(now/total*100);
-				ctx.fillStyle = "#333030";
-				ctx.font = "25px Arial";
-				ctx.textAlign = 'center';
-				ctx.textBaseline = 'middle';
-				ctx.fillText(percent+"%",w/2,h/2);
-			}
+		function drawCanvas(index,total,current){
+			let canvas = document.querySelectorAll("canvas")[index];
+			let ctx = canvas.getContext("2d");
+			let w = canvas.width;
+			let h = canvas.height;
+			let now = 0;
+			let term = current / 45;
+			let frame = setInterval(()=>{
+				now+=term;
+				if(now >= current){
+					now=current;
+					clearInterval(frame);
+				}
+				draw(ctx,w,h,now,total);
+			},1000/30);
 		}
 
-		let app = new App();
+		function draw(ctx,w,h,now,total){
+			ctx.clearRect(0,0,w,h);
 
+			ctx.beginPath();
+			ctx.moveTo(w/2,h/2);
+			ctx.arc(w/2,h/2,w/2-80,-Math.PI/2, 3/2*Math.PI);
+			ctx.closePath();
+			ctx.fillStyle = "#f4f5f9";
+			ctx.fill();
 
+			ctx.beginPath();
+			ctx.moveTo(w/2,h/2);
+			ctx.arc(w/2,h/2,w/2-80,-Math.PI/2,-Math.PI/2+(now/total)*(2*Math.PI));
+			ctx.closePath();
+			ctx.fillStyle = "#333030";
+			ctx.fill();
+
+			ctx.beginPath();
+			ctx.moveTo(w/2,h/2);
+			ctx.arc(w/2,h/2,w/2-100,-Math.PI/2, 3/2*Math.PI);
+			ctx.closePath();
+			ctx.fillStyle = "#fff";
+			ctx.fill();
+
+			let percent = Math.floor(now/total*1000)/10;
+			ctx.moveTo(w/2,h/2);
+			ctx.font = "25px Arial";
+			ctx.fillStyle = "#333030";
+			ctx.textAlign = "center";
+			ctx.textBaseline = "middle";
+			ctx.fillText(percent+"%",w/2,h/2);
+		}
+
+		function log(c){
+			console.log(c);
+		}
 	</script>
-
 </body>
 </html>

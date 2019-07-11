@@ -1,0 +1,146 @@
+#visual {
+	width: 1600px;
+	margin: 0 auto;
+	right: 50px;
+	background-image: url("/images/handshake.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	height: 500px;
+	top: 50px;
+}
+
+.visual-dark {
+	width: 100%;
+	height: 100%;
+	background: #0005;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.visual-dark > h1 {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 50px;
+	color: #fff;
+}
+
+.visual-dark > h1 > span {
+	color: #ff9999;
+	font-size: 70px;
+	margin: 0 10px;
+}
+
+#fund {
+	width: 1600px;
+	margin: 0 auto;
+	left: 750px;
+	transform: translateX(-50%);
+	height: 35%;
+	position:relative;
+	top: 100px;
+	border-radius: 5px;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-gap: 50px;
+}
+
+#fund > li {
+	box-shadow: 4px 5px 6px 5px #0002;
+	border-radius: 10px;	
+	position: relative;
+}
+
+.fund-num {
+	text-align: center;
+	margin-top: 25px;
+	font-weight: bolder;
+	color: #666;
+	font-size: 20px;
+}
+
+canvas {
+	width: 100%;
+	position: relative;
+}
+
+.fund-name {
+	color: #333030;
+	font-weight: bolder;
+	font-size: 20px;
+	text-align: center;
+}
+
+.ssbg {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ssbg > button {
+	width: 300px;
+	height: 30px;
+	border-radius: 5px;
+	background-color: transparent;
+	outline: none;
+	border : 1px solid #333;
+	cursor: pointer;
+	color: #333030;
+	font-size: 15px;
+}
+
+.ssbg >button:hover {
+	background-color: #f3f3f3;
+}
+
+.fund-current {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	margin-top: 5px;
+	justify-content: space-between;
+}
+
+.fund-current > div {
+	width: 60%;
+	text-align: right;
+	padding-right: 20px;
+	font-size: 15px;
+	color: #999;
+}
+
+.fund-current > div:first-child {
+	width: 40%;
+	text-align: left;
+	padding-left: 20px;
+}
+
+.fund-date {
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	display: flex;
+	margin-bottom: 8px;
+	margin-top: 5px;
+	justify-content: space-between;
+}
+
+.fund-date > div {
+	width: 60%;
+	text-align: right;
+	padding-right: 20px;
+	font-size: 15px;
+	color: #999;
+}
+
+.fund-date > div:first-child {
+	width: 40%;
+	text-align: left;
+	padding-left: 20px;
+}

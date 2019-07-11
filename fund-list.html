@@ -1,280 +1,100 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<link rel="stylesheet" href="./style.css">
-	<link rel="stylesheet" href="./fund-listStyle.css">
-	<script src="./Fund-list.js"></script>
-	<script src="./Fund.js"></script>
-	<script src="/js/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" href="./css/style.css">
+	<script src="./js/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" href="./css/fund-listStyle.css">
 	<meta charset="UTF-8">
-	<title>타이틀</title>
+	<title>A모듈</title>
 </head>
 <body>
 	<header>
-		<div class="header-wrapper">
-			<div id="logo">
-				KICKSTARTER
+		<div id="logo"></div>
+		<div id="profile">
+			<i class="far fa-user-circle"></i>
+			<p class="user-job">사용자</p>
+			<p class="user-email">ajwwlswotjd@naver.com</p>
+		</div>
+		<nav>
+			<li><a href="/index.html">
+				<i class="fas fa-plus-circle"></i>
+				메인페이지
+			</a></li>
+			<li class="active"><a href="/fund-list.html">
+				<i class="fas fa-chart-bar"></i>
+				펀드보기
+			</a></li>
+			<li><a href="/investor-list.html">
+				<i class="fas fa-chart-line"></i>
+				투자자목록
+			</a></li>
+			<li><a href="/form.html">
+				<i class="fas fa-plus-circle"></i>
+				펀드등록
+			</a></li>
+		</nav>
+
+		<div class="user-option">
+			<div class="register-mypage">
+				<i class="fas fa-user-plus"></i>
+				<a href="/register.html">회원가입</a>
 			</div>
 
-			<div id="profile">
-				<i class="far fa-user-circle"></i>
-				<p class="login"><a href="#">정재성</a></p>
-				<p class="email">wotjd@gondr.com</p>
+			<div class="login-logout">
+				<i class="fas fa-sign-out-alt"></i>
+				<a href="#">로그인</a>
 			</div>
-
-			<nav>
-				<ul>
-					<li>
-						<i class="fas fa-plus-circle"></i>
-						<a href="/form.html">펀드 등록</a>
-					</li>
-					<li class="active">
-						<i class="far fa-chart-bar"></i>
-						<a href="/fund-list.html">펀드 보기</a>
-					</li>
-					<li>
-						<i class="fas fa-chart-line"></i>
-						<a href="/investor-list.html">투자자 목록</a>
-					</li>
-					<li>
-						<i class="fas fa-user-plus"></i>
-						<a href="/register.html">회원가입</a>
-					</li>
-				</ul>
-			</nav>
-			<li class="log">
-				<i class="fas fa-sign-in-alt"></i>
-				로그아웃
-			</li>
 		</div>
 	</header>
 
-	<script>
-		let all = document.querySelectorAll("nav > ul > li");
-		let iAll = document.querySelectorAll("nav > ul > li > i");
-		iAll.forEach(function(x){
-			x.addEventListener("click",(e)=>{
-				e.target.parentElement.querySelector("a").click();
-			})
-		});
-		all.forEach( function(x){
-			x.addEventListener("click",(e)=>{e.target.querySelector("a").click()});
-		});
-		document.querySelector("#logo").addEventListener("click",()=>{
-			window.location.href = "/";
-		});
-		document.querySelector(".email").addEventListener("click",()=>{
-			document.querySelector(".login").click();
-		});
-	</script>
+	<section id="main-wrapper">
+		<p class="title">펀드보기</p>
+		<div id="list">
+			<li>
+				<div class="list-num">A0001</div>
+				<canvas></canvas>
+				<div class="list-name">준원이형 제모비용</div>
+				<div class="list-total list-item">
+					<div>
+						<i class="fas fa-money-bill-wave"></i>
+						모집금액
+					</div>
+					<div class="total">15,000,000원</div>
+				</div>
 
-	<section id="main-wrapper">	
-		<div class="title">
-			<h4>펀드 보기</h4>
+				<div class="list-current list-item">
+					<div>
+						<i class="fas fa-money-bill-wave"></i>
+						현재금액
+					</div>
+					<div class="current">150,000원</div>
+				</div>
+
+				<div class="list-date list-item">
+					<div>
+						<i class="fas fa-money-bill-wave"></i>
+						모집금액
+					</div>
+					<div class="date">15,000,000원</div>
+				</div>
+			</li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</div>
 
-
-		<div class="list">
-			<li>
-				<div class="top">B8891</div>
-				<canvas></canvas>
-				<p>넥슨 폭탄배송 프로젝트</p>
-				<div class="total data">
-					<div class="total-left left">
-						<i class="fas fa-money-bill"></i>
-						모집금액
-					</div>
-					<div class="total-right right">
-						141,141,141원
-					</div>
-				</div>
-				<div class="data now">
-					<div class="data-left left">
-						<i class="fas fa-hand-holding-usd"></i>
-						현재금액
-					</div>
-					<div class="data-right right">
-						150,000원
-					</div>
-				</div>
-				<div class="endDate data">
-					<div class="end-left left">
-						<i class="far fa-calendar"></i>
-						모집마감일
-					</div>
-					<div class="end-right right">
-						2020-11-14 오전 6:50:55
-					</div>
-				</div>
-				<div class="button-container">
-					<div class="cl1">
-						<div class="btn-left">
-							<button>투자자보기</button>
-						</div>
-
-						<div class="btn-right">
-							<button>상세보기</button>
-						</div>
-					</div>
-					<div class="cl2">
-						<button>투자하기</button>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="top">D4393</div>
-				<canvas></canvas>
-				<p>압둘알리 간식비</p>
-				<div class="total data">
-					<div class="total-left left">
-						<i class="fas fa-money-bill"></i>
-						모집금액
-					</div>
-					<div class="total-right right">
-						50,000원
-					</div>
-				</div>
-				<div class="data now">
-					<div class="data-left left">
-						<i class="fas fa-hand-holding-usd"></i>
-						현재금액
-					</div>
-					<div class="data-right right">
-						47,000원
-					</div>
-				</div>
-				<div class="endDate data">
-					<div class="end-left left">
-						<i class="far fa-calendar"></i>
-						모집마감일
-					</div>
-					<div class="end-right right">
-						2019-12-31 오후 11:59:59
-					</div>
-				</div>
-				<div class="button-container">
-					<div class="cl1">
-						<div class="btn-left">
-							<button>투자자보기</button>
-						</div>
-
-						<div class="btn-right">
-							<button>상세보기</button>
-						</div>
-					</div>
-					<div class="cl2">
-						<button>투자하기</button>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="top">C4534</div>
-				<canvas></canvas>
-				<p>탈조선 프로젝트</p>
-				<div class="total data">
-					<div class="total-left left">
-						<i class="fas fa-money-bill"></i>
-						모집금액
-					</div>
-					<div class="total-right right">
-						10,000,000,000원
-					</div>
-				</div>
-				<div class="data now">
-					<div class="data-left left">
-						<i class="fas fa-hand-holding-usd"></i>
-						현재금액
-					</div>
-					<div class="data-right right">
-						2,300,000원
-					</div>
-				</div>
-				<div class="endDate data">
-					<div class="end-left left">
-						<i class="far fa-calendar"></i>
-						모집마감일
-					</div>
-					<div class="end-right right">
-						2063-01-13 오후 6:00:00
-					</div>
-				</div>
-				<div class="button-container">
-					<div class="cl1">
-						<div class="btn-left">
-							<button>투자자보기</button>
-						</div>
-
-						<div class="btn-right">
-							<button>상세보기</button>
-						</div>
-					</div>
-					<div class="cl2">
-						<button>투자하기</button>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="top">D1234</div>
-				<canvas></canvas>
-				<p>준원이형 제모비용</p>
-				<div class="total data">
-					<div class="total-left left">
-						<i class="fas fa-money-bill"></i>
-						모집금액
-					</div>
-					<div class="total-right right">
-						500,000원
-					</div>
-				</div>
-				<div class="data now">
-					<div class="data-left left">
-						<i class="fas fa-hand-holding-usd"></i>
-						현재금액
-					</div>
-					<div class="data-right right">
-						180,000원
-					</div>
-				</div>
-				<div class="endDate data">
-					<div class="end-left left">
-						<i class="far fa-calendar"></i>
-						모집마감일
-					</div>
-					<div class="end-right right">
-						2019-10-6 오후 12:00:00
-					</div>
-				</div>
-				<div class="button-container">
-					<div class="cl1">
-						<div class="btn-left">
-							<button>투자자보기</button>
-						</div>
-
-						<div class="btn-right">
-							<button>상세보기</button>
-						</div>
-					</div>
-					<div class="cl2">
-						<button>투자하기</button>
-					</div>
-				</div>
-			</li>
-		</div>
-
-		<div class="page">
-			<div class="pg-container">
-				<ul>
-					<li><a href="#">이전</a></li>
-					<li><a class="active" href="#">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li><a href="#">4</a></li>
-					<li><a href="#">5</a></li>
-					<li><a href="#">6</a></li>
-					<li><a href="#">7</a></li>
-					<li><a href="#">8</a></li>
-					<li><a href="#">다음</a></li>
-				</ul>
+		<div id="page">
+			<div class="page-container">
+				<li>이전</li>
+				<li class="active">1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+				<li>5</li>
+				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>다음</li>
 			</div>
 		</div>
 	</section>
@@ -282,5 +102,13 @@
 	<footer>
 		Copyright Gondr Allright reserved. Since 2017-03-01
 	</footer>
+
+	<script>
+		$("nav > li").on("click",(e)=>{
+			e.target.querySelector("a").click();
+		});
+		$("#logo").on("click",()=>{$("nav > li:nth-child(1)").click()});
+		$(".register-mypage").on("click",(e)=>{e.target.querySelector("a").click()});
+	</script>
 </body>
 </html>

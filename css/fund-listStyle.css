@@ -1,0 +1,142 @@
+.title {
+	font-size: 30px;
+	position: absolute;
+	color: #bbb;
+	top: 60px;
+	left: 100px;
+}
+
+#list {
+	width: 75%;
+	margin: 0 auto;
+	right: 100px;
+	height: 80%;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	padding-top: 180px;
+	grid-gap: 70px;
+}
+
+#page {
+	width: 100%;
+	height: 20%;
+	position: relative;
+}
+
+.page-container {
+	width: 35%;
+	height: 20%;
+	right: 100px;
+	border : 1px solid #ccc;
+	border-radius: 5px;
+	margin-bottom: 45px;
+	position: relative;
+	top: 60px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.page-container > li {
+	width: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-left: 1px solid #ccc;
+	height: 100%;
+	cursor: pointer;
+	transition: all .1s;
+	font-size: 16px;
+	font-weight: bolder;
+	color: #333030;
+}
+
+.page-container > li:first-child {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-left: none;
+}
+
+.page-container > li:last-child {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.page-container > li:hover {
+	background-color: #f4f5f9;
+}
+
+li.active {
+	background-color: #f4f5f9;
+}
+
+#list > li {
+	box-shadow: 3px 2px 5px 2px #0001;
+	border-radius: 10px;
+	height: 85%;
+}
+
+.list-num {
+	text-align: center;
+	font-weight: bolder;
+	color: #333030;
+	font-size: 20px;
+	position: relative;
+	top: 20px;
+}
+
+#list > li > canvas {
+	width: 100%;
+	background: #eee;
+	position: relative;
+	top: 40px;
+}
+
+.list-name {
+	font-size: 23px;
+	font-weight: bolder;
+	color: #222;
+	position: relative;
+	top: 40px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+}
+
+.list-item {
+	width: 100%;
+	height: 65px;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.list-item {
+	top: 30px;
+}
+
+.list-item > div {
+	width: 50%;
+	height: 100%;
+	font-weight: bolder;
+	color: #bbb;
+	line-height: 65px;
+}
+
+.list-item > div:first-child {
+	text-align: left;
+	padding-left: 20px;
+}
+
+.list-item > div:last-child {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.list-current {
+	top: 15px;
+}
+
+.list-date {
+	
+}
